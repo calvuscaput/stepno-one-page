@@ -52,3 +52,12 @@ nextBtn.click(function(){
 prevBtn.click(function(){
     rdCarousel.trigger("prev.owl.carousel");
 });
+
+//Скрытие и раскрытие блоков в sevices-items
+$(".close-item").click(function() {
+   $(this).parent().animate({'left':'-475px'},500);
+})
+
+$(".more").click(function() {
+    $('.services-item__content').animate({'left':'0'},500);
+ })

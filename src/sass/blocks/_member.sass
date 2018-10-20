@@ -1,0 +1,25 @@
+.member
+    width: 370px
+    height: 440px
+    background: url(../img/hum2.jpg) center no-repeat
+    padding: 184px 17px 15px 18px
+    &:hover > .member__info
+        opacity: 1
+    &__info
+        opacity: 0
+        transition: opacity  0.5s
+        position: relative
+        box-shadow: 3px 6px 16px rgba(20, 20, 21, 0.18)
+        background-color: #6df6eb
+        padding: 40px 40px 32px 38px
+        p
+            padding-top: 15px
+            padding-bottom: 27px
+            line-height: 24px
+        &::before
+            content: ''
+            position: absolute
+            left: 20px
+            top: -30px
+            border: 10px solid transparent
+            border-bottom: 20px solid #6df6eb
