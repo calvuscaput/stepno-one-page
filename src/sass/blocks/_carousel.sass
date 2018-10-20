@@ -1,0 +1,79 @@
+.top-carousel-container
+    position: relative
+    max-width: 480px
+    .item
+        background: url('../img/chair.jpg')
+        max-width: 392px
+        height: 483px
+        box-shadow: 0 0 30px rgba(20, 20, 21, 0.13)
+    .owl-carousel__1
+        margin: 0 auto
+        max-width: 392px
+    .owl-theme 
+        .owl-dots
+            .owl-dot
+                width: 10px
+                height: 10px
+                margin-right: 2px
+                outline: none
+                ::last-child
+                    margin: 0
+                span
+                    border-radius: 3px
+                    background-color: #d0d0d0
+                    margin: 0
+                    outline: none
+                &.active
+                    span
+                        background-color: #71f6eb
+    .carousel-back
+        top: 35px
+        position: absolute
+        width: 100%
+        height: 412px
+        background-color: #eff0f2
+.left-carousel-container
+    @extend .top-carousel-container
+    max-width: 392px
+    .owl-carousel__2
+        margin: 0 auto
+        max-width: 319px
+    .item
+        background: url('../img/hum3.jpg') center no-repeat
+        background-size: cover
+        max-width: 319px
+        height: 410px
+    .carousel-back
+        top: 24px
+        width: 100%
+        height: 362px
+        background-color: #eff0f2
+
+.right-carousel-container
+    max-width: 666px
+    .item
+        border-radius: 3px
+        height: 362px
+        background-color: #eaebed
+    .car__nav
+        width: 100%
+        display: flex
+        justify-content: flex-end
+        div
+            margin-top: 30px
+            width: 53px
+            height: 53px
+            box-shadow: 2px 6px 11px rgba(20, 20, 21, 0.1)
+            border-radius: 3px
+            background-color: #71f6eb
+            padding: 20px 19px 18px 20px
+            &.disabled
+                background-color: #ffffff
+                img
+                    opacity: 0.3
+        .car__left
+            margin-right: 30px
+            img
+                transform: rotate(180deg)
+        .ccar__right
+
