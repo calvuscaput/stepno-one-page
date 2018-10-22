@@ -3,8 +3,19 @@
     max-width: 474px
     height: 370px
     position: relative
-    background: url('../img/services1.jpg') center no-repeat
     margin: 3px 0
+    &_1
+        background: url('../img/services2.jpg') center no-repeat
+    &_2
+        background: url('../img/services1.jpg') center no-repeat
+    &_3
+        background: url('../img/services2.jpg') center no-repeat
+    &_4
+        background: url('../img/services3.jpg') center no-repeat
+    &_5
+        background: url('../img/services4.jpg') center no-repeat
+    &_6
+        background: url('../img/services5.jpg') center no-repeat
     &_big
         max-width: 652px
         height: 371px
@@ -16,6 +27,13 @@
         left: -100%
         background-color: #6df6eb
         z-index: 4
+        padding: 50px 92px 34px 63px
+        h4
+            color: #000!important
+        p
+            opacity: 0.75!important
+            color: #000000!important
+            letter-spacing: 0.4px!important
     &:after
         content: ''
         position: absolute
@@ -35,10 +53,16 @@
         opacity: 0.95
         color: #ffffff
         letter-spacing: 1px
-        margin-bottom: 28px
+        margin-bottom: 38px
     p
         opacity: 0.91
         color: #ffffff
         line-height: 25px
         letter-spacing: 0.32px
         margin-bottom: 53px
+    .close-item
+        background: url("../img/cross.svg") center no-repeat
+        height: 17px
+        width: 17px
+        display: inline-block
+        cursor: pointer

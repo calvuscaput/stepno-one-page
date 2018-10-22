@@ -25,6 +25,7 @@ rdCarousel.owlCarousel({
     nav:false,
     items: 1,
     dots: false,
+    responsiveClass:true
 })
 
 function slideInit(e){
@@ -65,3 +66,8 @@ $(".close-item").click(function() {
 $(".more").click(function() {
     $(this).parent().parent().find('.services-item__content').animate({'left':'0'},500);
  })
+
+ ndCarousel.find('.owl-dot').on('click', function(){
+    rdCarousel.trigger('to.owl.carousel', [$(this).index(), 300]);
+ })
+
