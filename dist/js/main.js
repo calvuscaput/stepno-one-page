@@ -5,15 +5,17 @@ $('.owl-carousel__1').owlCarousel({
     items: 1,
 })
 
-$('.owl-carousel__2').owlCarousel({
+ndCarousel = $('.owl-carousel__2')
+ndCarousel.owlCarousel({
     loop:true,
     margin:10,
     nav:false,
     items: 1,
+    loop:false
 })
+//Третья карусель
 var nextBtn = $(".car__right");
 var prevBtn = $(".car__left");
-//Третья карусель
 var rdCarousel = $('.owl-carousel__3')
 rdCarousel.owlCarousel({
     onInitialized: slideInit,
@@ -48,16 +50,18 @@ function slidePosition(e) {
 //Работа с копками навигации
 nextBtn.click(function(){
     rdCarousel.trigger("next.owl.carousel");
+    ndCarousel.trigger("next.owl.carousel");
 });
 prevBtn.click(function(){
     rdCarousel.trigger("prev.owl.carousel");
+    ndCarousel.trigger("prev.owl.carousel");
 });
 
 //Скрытие и раскрытие блоков в sevices-items
 $(".close-item").click(function() {
-   $(this).parent().animate({'left':'-475px'},500);
+   $(this).parent().animate({'left':'-100%'},500);
 })
 
 $(".more").click(function() {
-    $('.services-item__content').animate({'left':'0'},500);
+    $(this).parent().parent().find('.services-item__content').animate({'left':'0'},500);
  })
