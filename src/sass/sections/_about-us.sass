@@ -1,6 +1,8 @@
 .about-us
     padding: 130px 36px 110px
     background-color: #f8fafa
+    @media screen and (max-width: 600px)
+        padding: 40px 10px 20px
     &__content
         display: flex
         flex-wrap: wrap
@@ -12,3 +14,16 @@
     &__text
         margin-left: 113px
         max-width: 474px
+        width: 41%
+        @media screen and (max-width: 1025px)
+            margin-left: 0
+        @media screen and (max-width: 600px)
+            width: 100%
+        @media screen and (max-width: 480px)
+            max-width: 392px
+        p
+            @media screen and (max-width: 1025px)
+                margin: 5px 0 20px
+            @media screen and (max-width: 800px)
+                font-size: 13px
+                line-height: 21px

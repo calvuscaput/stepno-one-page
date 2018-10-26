@@ -1,5 +1,7 @@
 .companies
     padding: 108px 0
+    @media screen and (max-width: 480px)
+        padding: 20px 0
     &__row
         display: flex
         flex-wrap: wrap
@@ -10,3 +12,8 @@
             width: 50%
             margin: 0 auto
             margin-bottom: 35px
+            @media screen and (max-width: 800px)
+                width: 100%
+            @media screen and (max-width: 480px)
+                justify-content: space-around
+                margin-bottom: 0

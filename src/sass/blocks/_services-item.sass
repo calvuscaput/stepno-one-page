@@ -1,24 +1,36 @@
 .services-item
     overflow: hidden
+    width: 41.3%
     max-width: 474px
-    height: 370px
     position: relative
     margin: 3px 0
+    @media screen and (max-width: 800px)
+        background-size: cover!important
+    @media screen and (max-width: 600px)
+        width: 100%
+        max-width: none
+        height: 371px
     &_1
-        background: url('../img/services2.jpg') center no-repeat
+        background: url('../img/services2.jpg') right no-repeat
     &_2
-        background: url('../img/services1.jpg') center no-repeat
+        background: url('../img/services1.jpg') right no-repeat
     &_3
-        background: url('../img/services2.jpg') center no-repeat
+        background: url('../img/services2.jpg') right no-repeat
     &_4
-        background: url('../img/services3.jpg') center no-repeat
+        background: url('../img/services3.jpg') right no-repeat
     &_5
-        background: url('../img/services4.jpg') center no-repeat
+        background: url('../img/services4.jpg') right no-repeat
     &_6
-        background: url('../img/services5.jpg') center no-repeat
+        background: url('../img/services5.jpg') right no-repeat
     &_big
+        width: 57.3%
         max-width: 652px
         height: 371px
+        @media screen and (max-width: 800px)
+            background-position: center
+        @media screen and (max-width: 600px)
+            width: 100%
+            max-width: none
     &__content
         width: 100%
         height: 100%
@@ -28,12 +40,22 @@
         background-color: #6df6eb
         z-index: 4
         padding: 50px 92px 34px 63px
+        text-align: justify
+        @media screen and (max-width: 800px)
+            padding: 50px 40px 0px 40px
+        @media screen and (max-width: 800px)
+            padding: 26px 12px 0
+            font-size: 12px
         h4
             color: #000!important
+            @media screen and (max-width: 800px)
+                margin-bottom: 20px!important
         p
             opacity: 0.75!important
             color: #000000!important
             letter-spacing: 0.4px!important
+            @media screen and (max-width: 800px)
+                margin-bottom: 27px!important
     &:after
         content: ''
         position: absolute
@@ -49,6 +71,10 @@
         padding-right: 80px
         position: relative
         z-index: 3
+        @media screen and (max-width: 800px)
+            padding: 80px 56px 0
+        @media screen and (max-width: 320px)
+            padding: 51px 20px 0
     h4
         opacity: 0.95
         color: #ffffff

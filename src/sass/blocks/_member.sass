@@ -1,8 +1,15 @@
 .member
-    width: 370px
-    height: 440px
+    width: 32%
     padding: 184px 17px 15px 18px
     margin: 5px 0
+    height: 440px
+    background-size: 100%
+    @media screen and (max-width: 1025px)
+        padding: 130px 17px 15px 
+    @media screen and (max-width: 800px)
+        width: 49%
+    @media screen and (max-width: 480px)
+        width: 100%
     &_1
         background: url(../img/hum1.jpg) center no-repeat
     &_2
