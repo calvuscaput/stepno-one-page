@@ -64,7 +64,7 @@ $(".close-item").click(function() {
 })
 
 $(".more").click(function() {
-    $(this).parent().parent().find('.services-item__content').animate({'left':'0'},500);
+    $(this).parent().parent().find('.services-item__click').animate({'left':'0'},500);
  })
 
  ndCarousel.find('.owl-dot').on('click', function(){
