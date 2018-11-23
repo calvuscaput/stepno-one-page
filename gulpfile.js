@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     cssnano = require('gulp-cssnano'),
     autoprefixer = require('gulp-autoprefixer'),
     concat = require('gulp-concat'),
-    uglify = require('gulp-uglify');
+    uglify = require('gulp-uglify'),
+    ghpages = require('gh-pages');
 
 gulp.task('style', function() {
     return gulp.src('src/sass/**/*.sass')
@@ -26,6 +27,10 @@ gulp.task('jslibs', function() {
 		.pipe(uglify())
 		.pipe(gulp.dest('dist/js'));
 });
+
+gulp.task('deployToGh', function() {
+    return ghpages.publish('dist');
+})
 
 gulp.task('watch', function() {
     gulp.watch('src/sass/**/*.sass', gulp.series('style'));
