@@ -32,9 +32,7 @@ function slideInit(e){
     rdCarousel.slideCount = e.item.count;
 }
 function slidePosition(e) {
-    rdCarousel.slidePos = e.item.index+1
-    console.log(rdCarousel.slidePos, rdCarousel.slideCount);
-    
+    rdCarousel.slidePos = e.item.index+1    
     if (rdCarousel.slidePos == rdCarousel.slideCount) {
         nextBtn.addClass('disabled');
     } else {
@@ -48,6 +46,7 @@ function slidePosition(e) {
     }
 
 }
+// Взаимодействие каруселей
 //Работа с копками навигации
 nextBtn.click(function(){
     rdCarousel.trigger("next.owl.carousel");
@@ -57,7 +56,10 @@ prevBtn.click(function(){
     rdCarousel.trigger("prev.owl.carousel");
     ndCarousel.trigger("prev.owl.carousel");
 });
-
+// При клике на точки одной карусели, другая тоже переключается
+ndCarousel.find('.owl-dot').on('click', function(){
+    rdCarousel.trigger('to.owl.carousel', [$(this).index(), 300]);
+ })
 //Скрытие и раскрытие блоков в sevices-items
 $(".close-item").click(function() {
    $(this).parent().animate({'left':'-100%'},500);
@@ -65,9 +67,5 @@ $(".close-item").click(function() {
 
 $(".more").click(function() {
     $(this).parent().parent().find('.services-item__click').animate({'left':'0'},500);
- })
-
- ndCarousel.find('.owl-dot').on('click', function(){
-    rdCarousel.trigger('to.owl.carousel', [$(this).index(), 300]);
  })
 
